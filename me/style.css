@@ -1,0 +1,87 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', cursive;
+  background: linear-gradient(to bottom right, #ffd6f5, #e6ccff);
+  overflow: hidden;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0; left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-box {
+  padding: 20px 30px;
+  background: white;
+  border-radius: 20px;
+  font-size: 1.5em;
+  color: #cc33cc;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  animation: float 3s ease-in-out infinite;
+  text-align: center;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.gift {
+  margin-top: 30px;
+  width: 100px;
+}
+
+.page2 {
+  display: none;
+  background: linear-gradient(to bottom right, #fcd6ff, #e6ccff);
+  overflow: hidden;
+}
+
+.birthday-message {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  font-family: 'Brush Script MT', cursive;
+  color: #b300b3;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInCenter 3s forwards ease-in-out;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInCenter {
+  to {
+    opacity: 1;
+  }
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  animation: floatHeart 4s linear infinite;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+@keyframes floatHeart {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
